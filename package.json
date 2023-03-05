@@ -1,93 +1,206 @@
 {
-    "name": "KushiBotz-MD",
+
+    "name": "Kushi MD",
+
     "version": "1.0.0",
-    "description": "WhatsApp BOT By ayodya",
+
+    "description": "RPG BOT Whatsapp",
+
     "main": "index.js",
+
     "type": "module",
+
     "directories": {
+
         "lib": "lib",
+
         "src": "src",
+
         "plugins": "plugins"
+
     }, 
+
     "scripts": {
+
         "start": "node index.js",
+
         "test": "node test.js",
+
         "test2": "nodemon index.js"
+
     },
+
     "keywords": [
+
         "termux-whatsapp-bot",
+
         "whatsapp-bot",
+
         "whatsapp",
+
         "js-whatsapp",
+
         "whatsapp",
-        "script",
-        "bot"
+
+        "Games-wabot",
+
+        "wabot-aq",
+
+        "multi-device",
+
+        "MD",
+
+        "baileys-md"
+
     ],
-    "homepage": "https://github.com/Ayoser2",
+
+    "homepage": "https://github.com/ayoser2/Zero77-MD",
+
     "author": {
-        "name": "Kushi"
+
+        "name": "ayodya"
+
     },
+
     "repository": {
+
         "type": "git",
-        "url": "git+https://github.com/Ayoser2"
+
+        "url": "git+https://github.com/ayoser2/Zero77-MD.git"
+
     },
+
     "bugs": {
-        "url": "https://github.com/Ayoser2"
+
+        "url": "https://github.com/ayoser2/Zero77-MD/issues"
+
     },
-  "license": "ISC",
-  "dependencies": {
-    "@adiwajshing/baileys": "github:Aldi-Ganz-Offc/baileys",
+
+    "license": "GPL-3.0-or-later",
+
+    "dependencies": {
+
+        "@adiwajshing/baileys": "github:amiruldev20/Baileys",
+
         "@bochilteam/scraper": "^4.0.22-alpha.0",
-        "@vitalets/google-translate-api": "^8.0.0",
+
+        "@vitalets/google-translate-api": "^8.0.0", 
+
+        "acrcloud": "^1.4.0", 
+
         "awesome-phonenumber": "^2.68.0",
-        "axios": "^0.24.0",
-        "brainly-scraper-v2": "^1.1.2",
+
+        "axios": "^1.3.4",
+
+        "brainly-scraper-v2": "^2.0.9",
+
         "cfonts": "^2.10.0",
+
         "chalk": "^5.0.0",
+
         "cheerio": "^1.0.0-rc.10",
-        "colors": "1.4.0",
-        "deepai": "^1.0.21",
-        "dhn-api": "^1.1.3",
-        "didyoumean": "^1.2.2",
+
+        "colors": "^1.4.0",
+
+        "dhn-api": "^1.1.3", 
+
+        "didyoumean": "^1.2.2", 
+
+        "emoji-api": "^2.0.1",
+
         "express": "^4.17.3",
-        "file-type": "^17.1.1",
+
+        "file-type": "^18.0.0",
+
         "fluent-ffmpeg": "^2.1.2",
-        "formdata-node": "^4.3.2",
-        "genshin": "^1.2.4",
-        "google-it": "^1.6.2",
-        "google-play-scraper": "^9.1.1",
-        "emoji-api": "^1.0.2",
+
+        "form-data": "^4.0.0",
+
+        "formdata-node": "^5.0.0", 
+
+        "genshin": "^1.2.4", 
+
+        "googleapis": "^111.0.0", 
+
+        "google-play-scraper": "^8.1.0",
+
+        "got": "^12.5.3", 
+
+        "@hapi/boom": "^10.0.0",
+
+        "https": "^1.0.0", 
+
         "human-readable": "^0.2.1",
-        "hxz-api": "^1.0.1",
+
         "imgbb-uploader": "^1.3.5",
-        "instagram-url-direct": "^1.0.13",
-    	"jimp": "^0.16.2",
+
+        "jimp": "^0.16.1",
+
+        "jsbarcode": "^3.11.5", 
+
         "jsdom": "^19.0.0",
-        "jadianime-ts": "^2.0.0",
+
+        "knights-canvas": "^1.3.7-a",
+
         "lodash": "^4.17.21",
-        "openai": "^3.1.0",
+
         "lowdb": "^3.0.0",
-        "moment-timezone": "^0.5.33",
-        "mongoose": "github:Automattic/mongoose",
-        "node-fetch": "^3.2.0",
+
+        "mime-types": "^2.1.34",
+
+        "moment-timezone": "^0.5.34",
+
+        "mongoose": "^6.4.3",
+
+        "node-fetch": "^3.2.10",
+
         "node-gtts": "^2.0.2",
+
         "node-os-utils": "^1.3.6",
+
         "node-webpmux": "^3.1.1",
+
+        "ocr-space-api-wrapper": "^2.1.1", 
+
+        "pdfkit": "^0.13.0", 
+
         "perf_hooks": "^0.0.1",
+
         "pino": "^7.8.0",
-        "pino-pretty": "^7.5.1",
+
         "qrcode": "^1.5.0",
-        "qrcode-terminal": "^0.12.0",
+
+        "qrcode-terminal": "^0.12.0", 
+
+        "qs": " 6.11.0", 
+
         "readline": "^1.3.0",
+
         "remove.bg": "^1.3.0",
+
+        "request": "^2.88.2", 
+
         "similarity": "^1.2.1",
+
         "socket.io": "^4.4.1",
+
         "syntax-error": "^1.4.0",
+
         "terminal-image": "^2.0.0",
-        "translate-google-api": "^1.0.4",
+
         "url-regex-safe": "^3.0.0",
-        "xfarr-api": "^1.0.3",
-        "yargs": "^17.3.1",
+
+        "wa-sticker-formatter": "^4.3.2", 
+
+        "ws": "^8.11.0", 
+
+        "xmldom": "^0.6.0", 
+
+        "yargs": "^17.5.1", 
+
         "zs-extract": "^1.4.1"
+
     }
+
 }
+
