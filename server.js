@@ -4,7 +4,7 @@ let app = global.app = express()
 
 function connect(PORT) {
 	
-	app.get('/', (req, res) => res.send('Hello World!'))
+	app.get('/', (req, res) => res.send('Halo Lort'))
 	
 	app.get('/nowa', async (req, res) => {
 		let q = req.query.number, regex = /x/g
@@ -40,7 +40,7 @@ function keepAlive() {
 
 function formatDate(n, locale = 'id') {
 	let d = new Date(n)
-	return d.toLocaleDateString(locale, { timeZone: 'Asia/Jakarta' })
+	return d.toLocaleDateString(locale, { timeZone: 'Asia/Colombo' })
 }
 
 export default connect

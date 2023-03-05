@@ -1,12 +1,7 @@
 {
-  "name": "Aldi-Offc",
-  "description": "Lightweight WhatsApp Bot",
-  "repository": "https://github.com/hyuura-official",
+  "name": "Kushi-md-multi",
+  "description": "WhatsApp Bot Recoded by Zerenity",
+  "repository": "https://github.com/ayoser2",
   "logo": "https://node-js-sample.herokuapp.com/node.png",
-  "keywords": [
-    "bot",
-    "whatsapp",
-    "multi-device",
-    "whatsapp-bot"
-  ]
+  "keywords": ["bot", "whatsapp", "whatsapp-bot", "rpg", "games-wabot", "epic rpg"]
 }

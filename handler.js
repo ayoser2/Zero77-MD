@@ -568,7 +568,7 @@ export async function handler(chatUpdate) {
         if (opts['pconly'] && m.chat.endsWith('g.us'))
             return
         if (opts['gconly'] && !m.chat.endsWith('g.us') && !m.fromMe)
-            return conn.reply(m.chat, 'Bot Sedang Dalam Mode Khusus GGonly\nMasuk Gc Biar Bisa Pake\n[ Link ]\nhttps://chat.whatsapp.com/DTOTmATsstp9lhHFLHVDPE', fkontak)
+            return conn.reply(m.chat, 'Bot Sedang Dalam Mode Khusus GGonly\nMasuk Gc Biar Bisa Pake\n[ Link ]\nhttps://chat.whatsapp.com/KS51Xw91eju8HTv5owtV1z', fkontak)
         if (opts['swonly'] && m.chat !== 'status@broadcast')
             return
         if (typeof m.text !== 'string')
@@ -1049,7 +1049,7 @@ const fgclink = {
         
 let own = {
 owner: 'Printah ini hanya di gunakan oleh *Owner* !'}[type]
-  if (own) return conn.sendButtonDocAccess(m.chat, ucapan() + tag + '\n' + own, 'Only OWNER', 'Owner', '.owner', m, adReply)
+  if (own) return conn.reply(m.chat, ucapan() + tag + '\n' + owm, fkontak)
 
 let mod = {
 mods: 'Printah ini hanya di gunakan oleh *Moderator BOT* !'}[type]
@@ -1061,7 +1061,7 @@ let prm = {
 let gc = {
         group: 'Printah ini hanya dapat di gunakan di dalam *Group* !'
         }[type]
-  if (gc) return conn.sendButtonDocAccess(m.chat, ucapan() + tag + '\n' + gc, 'Only Group', 'MENU', '.menu', m, adReply)
+  if (gc) return conn.reply(m.chat, ucapan() + tag + '\n' + gc, fkontak)
 
 let msg = {
         private: 'Printah ini hanya dapat di gunakan di *Private Chat !*',
@@ -1069,7 +1069,7 @@ let msg = {
         botAdmin: 'Printah ini hanya di gunakan ketika bot menjadi *Admin Group* !',
         restrict: 'Restrict belum di nyalakan di chat ini !'}[type]
   /*  if (msg) return conn.sendButtonDoc(m.chat, msg, wm, 'Menu', '.menu', fgclink)*/
-  if (msg) return conn.sendButtonDocAccess(m.chat, ucapan() + tag + '\n' + msg, wm, 'MENU', '.menu', m, adReply)
+  if (msg) return conn.reply(m.chat, ucapan() + tag + '\n' + msg, fkontak)
   
   
     let msgg = {

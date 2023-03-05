@@ -1880,7 +1880,7 @@ def shell():
     else:
         callback = print_dots(shutdown_event)
 
-    printer('', quiet)
+    printer('[ SPEEDTEST.NET ]\n', quiet)
     try:
         speedtest = Speedtest(
             source_address=args.source,
@@ -1910,11 +1910,11 @@ def shell():
                         raise
         sys.exit(0)
 
-    printer('*🔭 Testing From %(isp)s...*\n' % speedtest.config['client'],
+    printer('Testing from %(isp)s...' % speedtest.config['client'],
             quiet)
 
     if not args.mini:
-        printer('📑 Retrieving speedtest.net server list...', quiet)
+        printer('Retrieving speedtest.net server list...', quiet)
         try:
             speedtest.get_servers(servers=args.server, exclude=args.exclude)
         except NoMatchedServers:
@@ -1932,26 +1932,23 @@ def shell():
             )
 
         if args.server and len(args.server) == 1:
-            printer('📰 Retrieving information for the selected server...', quiet)
+            printer('Retrieving information for the selected server...', quiet)
         else:
-            printer('🔎 Selecting best server based on ping...', quiet)
+            printer('Selecting best server based on ping...', quiet)
         speedtest.get_best_server()
     elif args.mini:
         speedtest.get_best_server(speedtest.set_mini_server(args.mini))
 
     results = speedtest.results
 
-    printer('\n...................................................................................\n🏬 *Hosted By :* %(sponsor)s\n🌎 *Location :* %(name)s [%(d)0.2f km] '
-            '\n⚡ *Ping :* %(latency)s ms' % results.server, quiet)
+    printer('Hosted by %(sponsor)s \n(%(name)s) [%(d)0.2f km]\n\n*Speedtest Result :*\n\n_ping : %(latency)s ms_\n───────────────────' % results.server, quiet)
 
     if args.download:
-        printer('', quiet,
-                end=('', '\n')[bool(debug)])
         speedtest.download(
             callback=callback,
             threads=(None, 1)[args.single]
         )
-        printer('*📫 Download:* %0.2f M%s/s' %
+        printer('Download: %0.2f M%s/s\n───────────────────' %
                 ((results.download / 1000.0 / 1000.0) / args.units[1],
                  args.units[0]),
                 quiet)
@@ -1959,12 +1956,15 @@ def shell():
         printer('Skipping download test', quiet)
 
     if args.upload:
-        speedtest.upload()
-        printer('*🚀 Upload:* %0.2f M%s/s' %
+        speedtest.upload(
+            callback=callback,
+            pre_allocate=args.pre_allocate,
+            threads=(None, 1)[args.single]
+        )
+        printer('Upload: %0.2f M%s/s\n───────────────────' %
                 ((results.upload / 1000.0 / 1000.0) / args.units[1],
                  args.units[0]),
                 quiet)
-        printer("\n...................................................................................\n▶︎ ᴘᴏᴡᴇʀᴇᴅ ʙʏ *OOKLA*\n▶︎ sᴄʀɪᴘᴛ ᴍᴀᴅᴇ ʙʏ *Arifzyn*")
     else:
         printer('Skipping upload test', quiet)
 
