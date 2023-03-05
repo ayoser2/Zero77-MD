@@ -1,6 +1,6 @@
 {
-    "name": "rtxzy",
-    "version": "3.0",
+    "name": "kushi",
+    "version": "1.0",
     "description": "Customizable WhatsApp Bot",
     "depecrated": false,
     "main": "index.js",
@@ -26,16 +26,16 @@
         "MD",
         "baileys-md"
     ],
-    "homepage": "https://github.com/BOTCAHX/RTXZY-MD",
+    "homepage": "https://github.com/ayoser2/Zero77-MD",
     "author": {
-        "name": "Base Coded By TioXd"
+        "name": "Base Coded By Ayodya"
     },
     "repository": {
         "type": "git",
-        "url": "git+https://github.com/BOTCAHX/RTXZY-MD.git"
+        "url": "git+https://github.com/ayoser2/Zero77-MD.git"
     },
     "bugs": {
-        "url": "https://github.com/BOTCAHX/RTXZY-MD/issues"
+        "url": "https://github.com/ayoser2/Zero77-MD/issues"
     },
     "license": "GPL-3.0-or-later",
     "dependencies": {
@@ -90,6 +90,5 @@
         "wa-sticker-formatter": "^4.3.2",
         "xfarr-api": "^1.0.3",
         "yargs": "^17.5.1",
-        "yt-search": "^2.10.3"
     }
 }
